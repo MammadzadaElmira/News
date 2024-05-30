@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/news/style.css">
+</head>
+<body>
+    <div class="news-container">
+        {% for new in news %}
+        <div class="news-card">
+            <div class="news-image">
+            <img src="https://radiostar.net/wp-content/uploads/2022/10/istockphoto-171588907-612x612-1.jpg" alt="News Image">
+        </div>
+        <div class="news-content">
+            <h2 class="news-title">{{new.title}}</h2>
+            <p class="news-description">{{new.description}}</p>
+            <p class="news-city">{{new.city}}</p>
+            <a href="#" class="news-link">Read More</a>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
